@@ -9,18 +9,21 @@
 #include "dales.h"
 
 
-dales::dales(float xValue, float yValue)
+dales::dales(float xValue, float yValue, int daleSize)
 {
     posX = xValue;
     posY = yValue;
+    plane.set(daleSize,daleSize);
+    
+   
+    
+    
+    plane.setResolution(2, 2);
+    decalX=decalY=0;
     
 }
 void dales::setup(){
-    ofSetupScreenOrtho();
-    
-    plane.set(100,100);
-    plane.setResolution(10, 10);
-    decalX=decalY=0;
+   
     
 }
 
@@ -38,12 +41,9 @@ void dales::update(){
 
 void dales::draw()
 {
-   
-    //ofRect(posX, posY, 30, 30);
-
     
     plane.rotate(1, 0, 1, 0);
-    plane.setPosition(posX+100+decalX, posY+100+decalY, 0);
-    plane.drawFaces();
+    plane.setPosition(posX+decalX, posY+decalY, 0);
+    plane.drawWireframe();
 
 }

@@ -21,7 +21,7 @@ public:
     
     float posX,posY,decalX,decalY;
     
-    dales(float x, float y);
+    dales(float x, float y,int daleSize);
     ofPlanePrimitive plane;
  
     

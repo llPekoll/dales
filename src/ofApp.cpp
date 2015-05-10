@@ -3,15 +3,20 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetVerticalSync(true);
+     ofSetupScreenOrtho();
     
  
-    nDales =5;
+    nDales =10;
+    daleSize = 30;
     dale = new dales*[nDales];
     
     for( int i =0; i<nDales;i++)
     {
-        dale[i] = new dales(20+i*10,20+i*10);
-        dale[i]->setup();
+        for( int j =0; j<nDales;j++)
+        {
+        dale[j] = new dales(daleSize/2+i*daleSize,10+j*daleSize,daleSize);
+        
+        }
     }
  
 

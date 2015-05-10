@@ -21,6 +21,6 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
     
     dales **dale;
-    int nDales;
+    int nDales,daleSize;
 		
 };
