@@ -14,33 +14,39 @@ dales::dales(int xValue, int yValue, int daleSize)
     posX = xValue;
     posY = yValue;
     plane.set(daleSize,daleSize);
-    
+    size = daleSize;
     plane.setResolution(2, 2);
-    decalX=decalY=0;
+   
     
 }
-void dales::setup(){
+void dales::setup()
+{
    
     
 }
 
 void dales::update(){
     
-    if (ofGetMouseX() <posX+100 ) {
-        decalX=decalY =20;
+    if (ofGetMouseX() >posX &&
+        ofGetMouseX() <posX+ size &&
+        ofGetMouseY() >posY &&
+        ofGetMouseY() <posY+ size)
+    {
+        
+        plane.rotate(1, 0, 1, 0);
     }
-    else{
+    else
+    {
         decalX=decalY =0;
     }
    
-    
 }
 
 void dales::draw()
 {
     
-    plane.rotate(1, 0, 1, 0);
-    plane.setPosition(posX+decalX, posY+decalY, 0);
-    plane.drawWireframe();
+   
+    plane.setPosition(posX, posY, 0);
+    plane.drawFaces();
 
 }

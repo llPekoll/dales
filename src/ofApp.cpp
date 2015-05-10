@@ -7,7 +7,7 @@ void ofApp::setup(){
     
  
     nDales =8;
-    daleSize = 30;
+    daleSize = 50;
     dale = new dales*[nDales*nDales];
     
     a =0;
@@ -19,7 +19,6 @@ void ofApp::setup(){
         {
             dale[a] = new dales(j*daleSize+200,i*daleSize+200,daleSize+ofRandom(10));
             a++;
-      
         }
     }
  
