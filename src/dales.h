@@ -19,7 +19,7 @@ public:
     void draw();
     void setup(int x, int y);
     
-    float posX,posY;
+    float posX,posY,decalX,decalY;
     
     dales();
     ofPlanePrimitive plane;

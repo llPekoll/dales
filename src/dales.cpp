@@ -20,9 +20,17 @@ void dales::setup(int x, int y){
     posY =y;
     plane.set(100,100);
     plane.setResolution(10, 10);
+    decalX=decalY=0;
 }
 
 void dales::update(){
+    
+    if (ofGetMouseX() <posX+100 ) {
+        decalX=decalY =20;
+    }
+    else{
+        decalX=decalY =0;
+    }
     
     
 }
@@ -34,7 +42,7 @@ void dales::draw()
 
     
     
-    plane.setPosition(posX+100, posY+100, 0);
+    plane.setPosition(posX+100+decalX, posY+100+decalY, 0);
     plane.drawFaces();
 
 }
