@@ -35,10 +35,7 @@ void dales::update(){
         
         plane.rotate(1, 0, 1, 0);
     }
-    else
-    {
-        decalX=decalY =0;
-    }
+
    
 }
 
