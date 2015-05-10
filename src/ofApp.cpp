@@ -6,16 +6,17 @@ void ofApp::setup(){
      ofSetupScreenOrtho();
     
  
-    nDales =10;
+    nDales =4;
     daleSize = 30;
     dale = new dales*[nDales];
     
+    a =0;
     for( int i =0; i<nDales;i++)
     {
-        for( int j =0; j<nDales;j++)
+        for( int j =1; j<nDales;j++ )
         {
-        dale[j] = new dales(daleSize/2+i*daleSize,10+j*daleSize,daleSize);
-        
+        dale[j*i] = new dales(i*daleSize+200,j*daleSize+200,daleSize+ofRandom(10));
+
         }
     }
  

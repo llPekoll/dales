@@ -9,14 +9,11 @@
 #include "dales.h"
 
 
-dales::dales(float xValue, float yValue, int daleSize)
+dales::dales(int xValue, int yValue, int daleSize)
 {
     posX = xValue;
     posY = yValue;
     plane.set(daleSize,daleSize);
-    
-   
-    
     
     plane.setResolution(2, 2);
     decalX=decalY=0;

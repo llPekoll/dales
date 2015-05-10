@@ -22,5 +22,7 @@ class ofApp : public ofBaseApp{
     
     dales **dale;
     int nDales,daleSize;
-		
+    
+    int h,w;
+    int a;
 };
