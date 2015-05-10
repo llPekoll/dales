@@ -3,19 +3,35 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetVerticalSync(true);
-    dale.setup(20,20);
+    
+ 
+    nDales =5;
+    dale = new dales*[nDales];
+    
+    for( int i =0; i<nDales;i++)
+    {
+        dale[i] = new dales(20+i*10,20+i*10);
+        dale[i]->setup();
+    }
+ 
 
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    dale.update();
-    cout << ofGetMouseX()<<endl;
+    for( int i =0; i<nDales;i++)
+    {
+        dale[i]->update();
+    }
+   
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    dale.draw();
+    for( int i =0; i<nDales;i++)
+    {
+        dale[i]->draw();
+    }
 }
 
 //--------------------------------------------------------------

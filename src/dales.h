@@ -17,13 +17,13 @@ public:
     
     void update();
     void draw();
-    void setup(int x, int y);
+    void setup();
     
     float posX,posY,decalX,decalY;
     
-    dales();
+    dales(float x, float y);
     ofPlanePrimitive plane;
-   
+ 
     
 private:
     
