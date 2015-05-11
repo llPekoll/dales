@@ -16,7 +16,8 @@ dales::dales(int xValue, int yValue, int daleSize)
     plane.set(daleSize,daleSize);
     size = daleSize;
     plane.setResolution(2, 2);
-   
+    a=0;
+    
     
 }
 void dales::setup()
@@ -33,7 +34,14 @@ void dales::update(){
         ofGetMouseY() <posY+ size)
     {
         
-        plane.rotate(1, 0, 1, 0);
+        
+     
+        if(a<180){
+            a+=4;
+            angle.y = a;
+            plane.setOrientation(angle );
+        
+        }
     }
 
    
@@ -42,7 +50,6 @@ void dales::update(){
 void dales::draw()
 {
     
-   
     plane.setPosition(posX, posY, 0);
     plane.drawFaces();
 

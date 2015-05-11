@@ -19,10 +19,11 @@ public:
     void draw();
     void setup();
     
-    int posX,posY,size;
+    int posX,posY,size,a;
     
     dales(int x, int y,int daleSize);
     ofPlanePrimitive plane;
+    ofVec3f angle;
  
     
 private:
