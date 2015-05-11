@@ -18,8 +18,10 @@ public:
     void update();
     void draw();
     void setup();
+    void rotationDale();
     
     int posX,posY,size,a;
+    bool isRotating,fcountStart;
     
     dales(int x, int y,int daleSize);
     ofPlanePrimitive plane;
