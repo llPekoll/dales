@@ -6,7 +6,7 @@ void ofApp::setup(){
      ofSetupScreenOrtho();
     
  
-    nDales =20;
+    nDales =10;
     daleSize = 50;
     dale = new dales*[nDales*nDales];
     

@@ -26,6 +26,8 @@ public:
     dales(int x, int y,int daleSize);
     ofPlanePrimitive plane;
     ofVec3f angle;
+    
+    ofImage texture;
  
     
 private:

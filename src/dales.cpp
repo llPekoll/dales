@@ -20,6 +20,9 @@ dales::dales(int xValue, int yValue, int daleSize)
     isRotating = false;
     fcountStart = false;
     
+    texture.loadImage("text.jpg");
+    texture.getTextureReference().setTextureWrap( GL_REPEAT, GL_REPEAT );
+    
 }
 void dales::setup()
 {
@@ -49,16 +52,15 @@ void dales::update(){
         a =0;
     }
     
-    
 }
 
 void dales::draw()
 {
-    
+     texture.bind();
     plane.setPosition(posX, posY, 0);
-    //plane.drawFaces();
+    plane.drawFaces();
     plane.drawWireframe();
-
+    texture.unbind();
 }
 
 void dales::rotationDale(){
