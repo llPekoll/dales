@@ -21,7 +21,7 @@ dales::dales(int xValue, int yValue, int daleSize)
     fcountStart = false;
     
     texture.loadImage("text.jpg");
-    texture.getTextureReference().setTextureWrap( GL_REPEAT, GL_REPEAT );
+    plane.mapTexCoords(0, 0, texture.getWidth(), texture.getHeight());
     
 }
 void dales::setup()
@@ -56,11 +56,11 @@ void dales::update(){
 
 void dales::draw()
 {
-     texture.bind();
+    texture.getTextureReference().bind();
     plane.setPosition(posX, posY, 0);
     plane.drawFaces();
     plane.drawWireframe();
-    texture.unbind();
+    texture.getTextureReference().unbind();
 }
 
 void dales::rotationDale(){
