@@ -8,11 +8,11 @@
 
 #include "dales.h"
 
-
-dales::dales(int xValue, int yValue, int daleSize)
+dales::dales(int x, int y,int daleSize, int nbDales,    //dale postion
+             int u, int v) // uv maps
 {
-    posX = xValue;
-    posY = yValue;
+    posX = x;
+    posY = y;
     plane.set(daleSize,daleSize);
     size = daleSize;
     plane.setResolution(2, 2);
@@ -20,13 +20,14 @@ dales::dales(int xValue, int yValue, int daleSize)
     isRotating = false;
     fcountStart = false;
     
-    texture.loadImage("text.jpg");
-    plane.mapTexCoords(0, 0, texture.getWidth(), texture.getHeight());
+    texture.loadImage("text.png");
+    plane.mapTexCoords( u*daleSize,  v*daleSize,
+                        (texture.width/(nbDales))+u*daleSize, (texture.height/(nbDales))+v*daleSize );
+    
     
 }
 void dales::setup()
 {
-   
     
 }
 
@@ -44,7 +45,7 @@ void dales::update(){
     if (fcountStart)
     {
         rotationDale();
-        a++;
+        a+=2;
     }
     
     if (a>=180){

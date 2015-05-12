@@ -5,7 +5,6 @@ void ofApp::setup(){
     ofSetVerticalSync(true);
      ofSetupScreenOrtho();
     
- 
     nDales =10;
     daleSize = 50;
     dale = new dales*[nDales*nDales];
@@ -17,12 +16,13 @@ void ofApp::setup(){
         
         for( int j =0; j<nDales;j++ )
         {
-            dale[a] = new dales(j*daleSize,i*daleSize,daleSize+ofRandom(10));
+            dale[a] = new dales(i*daleSize+20,j*daleSize+20,   // dales position
+                                daleSize,nDales,                 // dales infos
+                                i,j);             //dales uv bot
             a++;
         }
     }
  
-
 }
 
 //--------------------------------------------------------------
@@ -40,49 +40,4 @@ void ofApp::draw(){
     {
         dale[i]->draw();
     }
-}
-
-//--------------------------------------------------------------
-void ofApp::keyPressed(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::keyReleased(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
-
 }

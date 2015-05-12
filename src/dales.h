@@ -23,7 +23,8 @@ public:
     int posX,posY,size,a;
     bool isRotating,fcountStart;
     
-    dales(int x, int y,int daleSize);
+    dales(int x, int y,int daleSize,int nbDales,
+          int u, int v);
     ofPlanePrimitive plane;
     ofVec3f angle;
     
