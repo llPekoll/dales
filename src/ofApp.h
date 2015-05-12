@@ -15,4 +15,14 @@ class ofApp : public ofBaseApp{
     
     int h,w;
     int a;
+    
+    
+    ofShader shader;
+    
+    ofImage backgroundImage;
+    ofImage foregroundImage;
+    ofImage brushImage;
+    
+    ofFbo maskFbo;
+    ofFbo fbo;
 };

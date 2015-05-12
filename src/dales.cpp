@@ -21,8 +21,8 @@ dales::dales(int x, int y,int daleSize, int nbDales,    //dale postion
     fcountStart = false;
     
     texture.loadImage("text.png");
-    plane.mapTexCoords( u*daleSize,  v*daleSize,
-                        (texture.width/(nbDales))+u*daleSize, (texture.height/(nbDales))+v*daleSize );
+ //   plane.mapTexCoords( u*daleSize,  v*daleSize,
+   //                     (texture.width/(nbDales))+u*daleSize, (texture.height/(nbDales))+v*daleSize );
     
     
 }
